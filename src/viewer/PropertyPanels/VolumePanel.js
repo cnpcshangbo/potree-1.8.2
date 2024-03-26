@@ -389,14 +389,18 @@ export class VolumePanel extends MeasurePanel{
 
 		{
 			let elVolume = this.elContent.find(`#measurement_volume`);
+			let elCrack = this.elContent.find(`#measurement_crack`);
 			let volume = this.measurement.getVolume();
 			elVolume.html(Utils.addCommas(volume.toFixed(2)));
-		}
 
-		{
-			let elCrack = this.elContent.find(`#measurement_crack`);
-			let crack = this.measurement.getCrack();
-			elCrack.html(Utils.addCommas(crack.toFixed(2))); 
+			// Then, handle getCrack asynchronously
+			this.measurement.getCrack()
+			.then(crack => {
+				elCrack.html(Utils.addCommas(crack));
+			})
+			.catch(error => {
+				console.error("Error updating volume panel:", error);
+			});
 		}
 
 		this.elCheckClip.prop("checked", this.measurement.clip);

@@ -201,11 +201,13 @@ export class BoxVolume extends Volume{
 		return Math.abs(this.scale.x * this.scale.y * this.scale.z);
 	}
 
-	getCrack(){
-		// This is a fake number now, it would be replace by an HTTP API later.
-		return Math.abs(this.scale.x * this.scale.y * this.scale.z * 0.5);
+	async getCrack(){
+		const url = 'http://45.79.141.198:5002/api';
+		const response = await fetch(url);
+		const data = await response.json();
+		const crack = Math.abs(this.scale.x * this.scale.y * this.scale.z * data.number);
+		return crack.toFixed(2);
 	}
-
 };
 
 export class SphereVolume extends Volume{
