@@ -202,7 +202,7 @@ export class BoxVolume extends Volume{
 	}
 
 	async getCrack(){
-		const url = 'http://45.79.141.198:5002/api';
+		const url = 'http://45.79.141.198:5002/api?box_coord=' + this.position.x + ',' + this.position.y + ',' + this.position.z + '&box_orientation=' + this.quaternion.x + ',' + this.quaternion.y + ',' + this.quaternion.z + ',' + this.quaternion.w + '&box_size=' + this.scale.x + ',' + this.scale.y + ',' + this.scale.z + '&html_file=' + window.location.href;
 		const response = await fetch(url);
 		const data = await response.json();
 		const crack = Math.abs(this.scale.x * this.scale.y * this.scale.z * data.number);
