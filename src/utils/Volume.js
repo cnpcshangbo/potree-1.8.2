@@ -201,6 +201,11 @@ export class BoxVolume extends Volume{
 		return Math.abs(this.scale.x * this.scale.y * this.scale.z);
 	}
 
+	getCrack(){
+		// This is a fake number now, it would be replace by an HTTP API later.
+		return Math.abs(this.scale.x * this.scale.y * this.scale.z * 0.5);
+	}
+
 };
 
 export class SphereVolume extends Volume{

@@ -68,6 +68,18 @@ export class VolumePanel extends MeasurePanel{
 				<br>
 				<span style="font-weight: bold">Volume: </span>
 				<span id="measurement_volume"></span>
+				<br>
+				<span style="font-weight: bold">Total Crack Length: </span>
+				<span id="measurement_crack"></span>
+				<br>
+				<span style="font-weight: bold">Horizontal Crack Length: </span>
+				<span id="measurement_volume"></span>
+				<br>
+				<span style="font-weight: bold">Vertical Crack Length: </span>
+				<span id="measurement_volume"></span>
+				<br>
+				<span style="font-weight: bold">Diagonal Crack Length: </span>
+				<span id="measurement_volume"></span>
 
 				<!--
 				<li>
@@ -379,6 +391,12 @@ export class VolumePanel extends MeasurePanel{
 			let elVolume = this.elContent.find(`#measurement_volume`);
 			let volume = this.measurement.getVolume();
 			elVolume.html(Utils.addCommas(volume.toFixed(2)));
+		}
+
+		{
+			let elCrack = this.elContent.find(`#measurement_crack`);
+			let crack = this.measurement.getCrack();
+			elCrack.html(Utils.addCommas(crack.toFixed(2))); 
 		}
 
 		this.elCheckClip.prop("checked", this.measurement.clip);
