@@ -204,6 +204,13 @@ export class BoxVolume extends Volume {
     return new Promise((resolve, reject) => {
       clearTimeout(this.debounceTimer);
 
+      if (this.abortController) {
+        this.abortController.abort(); // Cancel the previous API request
+      }
+
+      this.abortController = new AbortController(); // Create a new AbortController for the current request
+      const signal = this.abortController.signal;
+
       this.debounceTimer = setTimeout(async () => {
         const url =
           "http://localhost:5002/analyze_crack?click1_x=" +
@@ -218,7 +225,7 @@ export class BoxVolume extends Volume {
           window.location.href;
 
         try {
-          const response = await fetch(url);
+          const response = await fetch(url, { signal }); // Pass the AbortSignal to the fetch request
           const data = await response.json();
 
           if (data.hasOwnProperty("total_crack_length")) {
@@ -229,7 +236,11 @@ export class BoxVolume extends Volume {
             throw new Error("Invalid JSON response format");
           }
         } catch (error) {
-          reject(error); // Reject the promise with the error
+          if (error.name === "AbortError") {
+            console.log("API request aborted"); // Handle the aborted request
+          } else {
+            reject(error); // Reject the promise with the error
+          }
         }
       }, 500); // Adjust the debounce delay as needed (in milliseconds)
     });
