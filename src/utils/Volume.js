@@ -163,6 +163,8 @@ export class BoxVolume extends Volume {
     this.add(this.frame);
 
     this.update();
+
+    this.debounceTimer = null;
   }
 
   update() {
@@ -199,25 +201,38 @@ export class BoxVolume extends Volume {
   }
 
   async getCrack() {
-    const url =
-      "http://localhost:5002/analyze_crack?click1_x=" +
-      this.position.x +
-      "&click1_y=" +
-      this.position.y +
-      "&click2_x=" +
-      (this.position.x + this.scale.x) +
-      "&click2_y=" +
-      (this.position.y + this.scale.y) +
-      "&html_file=" +
-      window.location.href;
-    const response = await fetch(url);
-    const data = await response.json();
-    if (data.hasOwnProperty("total_crack_length")) {
-      const crack = Math.abs(data.total_crack_length);
-      return crack.toFixed(2);
-    } else {
-      throw new Error("Invalid JSON response format");
-    }
+    return new Promise((resolve, reject) => {
+      clearTimeout(this.debounceTimer);
+
+      this.debounceTimer = setTimeout(async () => {
+        const url =
+          "http://localhost:5002/analyze_crack?click1_x=" +
+          this.position.x +
+          "&click1_y=" +
+          this.position.y +
+          "&click2_x=" +
+          (this.position.x + this.scale.x) +
+          "&click2_y=" +
+          (this.position.y + this.scale.y) +
+          "&html_file=" +
+          window.location.href;
+
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+
+          if (data.hasOwnProperty("total_crack_length")) {
+            const crack = Math.abs(data.total_crack_length);
+            console.log(crack.toFixed(2)); // Log the latest stable value
+            resolve(crack); // Resolve the promise with the calculated crack length
+          } else {
+            throw new Error("Invalid JSON response format");
+          }
+        } catch (error) {
+          reject(error); // Reject the promise with the error
+        }
+      }, 500); // Adjust the debounce delay as needed (in milliseconds)
+    });
   }
 }
 
