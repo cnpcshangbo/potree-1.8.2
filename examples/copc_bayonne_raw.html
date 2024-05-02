@@ -48,7 +48,7 @@
 		viewer.setPointBudget(2_000_000);
 		viewer.loadSettingsFromURL();
 
-		viewer.setDescription("Bayonne Bridge Pier 8-9 3D point cloud from raw images");
+		viewer.setDescription("Bayonne Bridge (BIN 552304D) Pier 8-9 3D point cloud from raw images");
 
 		viewer.loadGUI(() => {
 			viewer.setLanguage('en');
@@ -98,10 +98,8 @@
 				scene.addMeasurement(measure);
 			}
 		}
-		{ // ANNOTATIONS
+		{ // Section ANNOTATIONS
 			let scene = viewer.scene;
-
-			
 			//scene.annotations.add(new Potree.Annotation({
 			//	position: [572264.6514949066, 4498560.698092791, 32.856],
 			//	title: "Trees",
@@ -145,7 +143,8 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "1",
+			scene.annotations.add(new Potree.Annotation({
+				title: "23 (Pier 9 South)",
 				position: [572271.929, 4498555.032, 33.533],
 				cameraPosition: [572265.4701510913, 4498556.888969469, 34.160183646169145],
 				cameraTarget: [572272.0182075038, 4498555.343273453, 33.53395678885194],
@@ -166,7 +165,8 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "2",
+			scene.annotations.add(new Potree.Annotation({
+				title: "22",
 				position: [572272.358, 4498557.407, 33.802],
 				cameraPosition: [572266.4701510913, 4498558.888969469, 34.160183646169145],
 				cameraTarget: [572273.0182075038, 4498557.343273453, 33.53395678885194],
@@ -187,13 +187,13 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "3",
+			scene.annotations.add(new Potree.Annotation({
+				title: "21",
 				position: [572272.867, 4498560.301, 34.069],
 				cameraPosition: [572267, 4498561, 34.9],
 				cameraTarget: [572273.6, 4498559.6, 34.3],
 				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
 				actions: [
-				//{572272.358, 4498557.407, 33.802
 				{
 					"icon": Potree.resourcePath + "/icons/photo.svg",
 					"onclick": function(){
@@ -208,7 +208,8 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "4",
+			scene.annotations.add(new Potree.Annotation({//20
+				title: "20",
 				position: [572273.411, 4498563.298, 34.741],
 				cameraPosition: [572267, 4498561, 34.9],
 				cameraTarget: [572273.6, 4498559.6, 34.3],
@@ -229,7 +230,8 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "5",
+			scene.annotations.add(new Potree.Annotation({//19
+				title: "19",
 				position: [572274.010, 4498566.489, 35.459],
 				cameraPosition: [572268.50, 4498566.66, 36.25],
 				cameraTarget: [572275.05, 4498565.11, 35.62],
@@ -250,7 +252,8 @@
 					}
 				}]
 			}));
-			scene.annotations.add(new Potree.Annotation({title: "6",
+			scene.annotations.add(new Potree.Annotation({//18
+				title: "18",
 				position: [572274.528, 4498569.336, 35.906],
 				cameraPosition: [572268.8, 4498568.8, 36.9],
 				cameraTarget: [572275.5, 4498567.46, 36.36],
@@ -268,6 +271,558 @@
 					"onclick": function(){
 						// Open a photo here
 						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074589.JPG");
+					}
+				}]
+			}));			
+			scene.annotations.add(new Potree.Annotation({//0
+				title: "0",
+				position: [572287.698, 4498628.007, 42.617],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//{572272.358, 4498557.407, 33.802
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074589.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074589.JPG");
+					}
+				}]
+			}));		
+
+			scene.annotations.add(new Potree.Annotation({//1
+				title: "1",
+				position: [572287.114, 4498626.282, 42.549],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//{572272.358, 4498557.407, 33.802
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074589.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074589.JPG");
+					}
+				}]
+				}));		
+
+			scene.annotations.add(new Potree.Annotation({//2
+				title: "2",
+				position: [572286.645, 4498624.396, 42.361],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//{572272.358, 4498557.407, 33.802
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074589.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074589.JPG");
+					}
+				}]
+			}));	
+
+
+
+			scene.annotations.add(new Potree.Annotation({//3
+				title: "3",
+				position: [572286.166, 4498621.043, 40.019],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//{572272.358, 4498557.407, 33.802
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074589.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074589.JPG");
+					}
+				}]
+			}));
+
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "Pier 8 (North)",
+				position: [572285.463, 4498628.288, 38.303],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+				}));
+
+
+			scene.annotations.add(new Potree.Annotation({//4
+				title: "4",
+				position: [572285.398, 4498618.014, 39.878],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({//5
+				title: "5",
+				position: [572284.581, 4498615.099, 39.781],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({//6
+				title: "6",
+				position: [572283.957, 4498612.194, 39.648],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({//7
+				title: "7",
+				position: [572283.152, 4498608.981, 39.488],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+
+			scene.annotations.add(new Potree.Annotation({//8
+				title: "8",
+				position: [572282.288, 4498605.759, 39.212],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+
+			scene.annotations.add(new Potree.Annotation({//9
+				title: "9",
+				position: [572281.443, 4498602.075, 38.762],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+
+			scene.annotations.add(new Potree.Annotation({//10
+				title: "10",
+				position: [572280.675, 4498598.441, 38.257],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+
+			scene.annotations.add(new Potree.Annotation({//11
+				title: "11",
+				position: [572279.836, 4498594.757, 37.822],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({//12
+				title: "12",
+				position: [572279.518, 4498591.525, 37.317],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "12A",
+				position: [572278.826, 4498589.664, 37.144],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "13",
+				position: [572278.174, 4498586.630, 36.768],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "14",
+				position: [572277.533, 4498583.018, 36.280],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "15",
+				position: [572276.768, 4498579.433, 35.803],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "16",
+				position: [572275.951, 4498575.829, 35.321],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+			scene.annotations.add(new Potree.Annotation({
+				title: "17",
+				position: [572275.951, 4498575.829, 35.321],
+				cameraPosition: [572260.8048478367, 4498606.929170616, 47.593824133695705],
+				cameraTarget: [572288.8880127085, 4498604.423935292, 31.83348518541595],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+
+
+		}
+		{ // Crack Annotations
+			let scene = viewer.scene;
+			scene.annotations.add(new Potree.Annotation({//Crack
+				title: "Crack",
+				position: [572285.227173294, 4498557.180840966, 44.757],
+				cameraPosition: [572285.227173294, 4498557.180840966, 44.757],
+				cameraTarget: [572275.5, 4498567.46, 36.36],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
+					}
+				}]
+			}));
+		}
+		{ // Stain Annotations
+			let scene = viewer.scene;
+			scene.annotations.add(new Potree.Annotation({
+				title: "Stain",
+				position: [572278.734, 4498590.017, 38.197],
+				cameraPosition: [572273.8331424689, 4498589.883907548, 40.741425582329015],
+				cameraTarget: [572289.0022511373, 4498583.4973863065, 31.103132667741495],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074769.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074769.JPG");
 					}
 				}]
 			}));
