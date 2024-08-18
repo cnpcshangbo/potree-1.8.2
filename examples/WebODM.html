@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 
+    WebODM - User-friendly, commercial grade software for processing aerial imagery.
+    Copyright (C) 2020  WebODM Authors
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="WebODM Contributors">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="/media/CACHE/images/settings/robotlab_logo-transparent-small-2/280a48031f6c87f40affcd0022629772.png" sizes="32x32">
+
+    <link rel="stylesheet" type="text/css" href="/static/app/css/bootstrap.min.css" />
+
+    <link href="/static/app/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/app/css/metisMenu.min.css" rel="stylesheet">
+    <link href="/static/app/css/sb-admin-2.css" rel="stylesheet">
+    
+
+    <script src="/static/app/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/static/app/js/vendor/es6-shim.min.js"></script>
+    <script src="/static/app/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="/static/app/js/vendor/system.js"></script>
+    <script src="/jsi18n/"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/static/app/js/vendor/potree/build/potree/potree.css">
+    <link rel="stylesheet" type="text/css" href="/static/app/js/vendor/potree/libs/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app/js/vendor/potree/libs/openlayers3/ol.css">
+    <link rel="stylesheet" type="text/css" href="/static/app/js/vendor/potree/libs/spectrum/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="/static/app/js/vendor/potree/libs/jstree/themes/mixed/style.css">
+
+    <script src="/static/app/js/vendor/potree/libs/spectrum/spectrum.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/three.js/build/three.min.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/three.js/extra/lines.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/other/BinaryHeap.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/tween/tween.min.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/d3/d3.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/proj4/proj4.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/openlayers3/ol.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/i18next/i18next.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/jstree/jstree.js"></script>
+    <script src="/static/app/js/vendor/potree/build/potree/potree.js"></script>
+    <script src="/static/app/js/vendor/potree/libs/plasio/js/laslaz.js"></script>
+
+
+    
+    <link type="text/css" href="/static/app/bundles/./css/main-16d3bd051a29b32c8d05.css" rel="stylesheet" />
+<script type="text/javascript" src="/static/app/bundles/main-16d3bd051a29b32c8d05.js" ></script>
+
+    
+    <script src='/plugins/projects-charts1/Chart.min.js'></script>
+<script src='/plugins/osm-quickedit/main.js'></script>
+<script src='/plugins/editshortlinks/main.js'></script>
+    
+    
+
+    <title>Task of 2024-06-07T20:41:25.134Z - CCNY Robotics Lab WebODM</title>
+
+    
+    <style type="text/css">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Primary */
+body,
+ul#side-menu.nav a,
+.console,
+.alert,
+.form-control,
+.dropdown-menu > li > a,
+.theme-color-primary
+{
+    color: #2c3e50;
+}
+.theme-border-primary{
+    border-color: #2c3e50;
+}
+.tooltip .tooltip-inner{
+	background-color: #2c3e50;
+}
+.tooltip.left .tooltip-arrow{ border-left-color: #2c3e50; }
+.tooltip.top .tooltip-arrow{ border-top-color: #2c3e50; }
+.tooltip.bottom .tooltip-arrow{ border-bottom-color: #2c3e50; }
+.tooltip.right .tooltip-arrow{ border-right-color: #2c3e50; }
+
+.theme-fill-primary{
+    fill: #2c3e50;
+}
+.theme-stroke-primary{
+    stroke: #2c3e50;
+}
+
+/* Secondary */
+body,
+.navbar-default,
+.console,
+.alert,
+.modal-content,
+.form-control,
+.dropdown-menu,
+.theme-secondary
+{
+	background-color: #ffffff;
+}
+
+.tooltip > .tooltip-inner{
+	color: #ffffff;
+}
+
+.alert.close:hover{
+    color: #000000;
+}
+.alert.close:focus{
+    color: #000000;
+}
+
+.pagination li > a,
+.pagination .disabled > a,
+.pagination .disabled > a:hover, .pagination .disabled > a:focus{
+	color: #395068;
+	background-color: #ffffff;
+	border-color: #b2b2b2;
+}
+.pagination li > a{
+	color: #2c3e50;
+}
+.theme-border-secondary-07{
+	border-color: #b2b2b2 !important;
+}
+
+.btn-secondary, .btn-secondary:active, .open>.dropdown-toggle.btn-secondary{
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #2c3e50;
+}
+
+.btn-secondary:hover, .open>.dropdown-toggle.btn-secondary:hover,
+.btn-secondary:active, .open>.dropdown-toggle.btn-secondary:active,
+.btn-secondary:focus, .open>.dropdown-toggle.btn-secondary:focus{
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #2c3e50;
+}
+
+
+/* Tertiary */
+a, a:hover, a:focus{
+	color: #3498db;
+}
+.progress-bar-success{
+    background-color: #3498db;
+}
+
+/* Button primary */
+#navbar-top .navbar-top-links a:hover,
+#navbar-top .navbar-top-links a:focus,
+#navbar-top .navbar-top-links .open > a{
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+#navbar-top ul#side-menu a:focus{
+    background-color: inherit;
+    color: inherit;
+}
+
+#navbar-top ul#side-menu a:hover, #navbar-top ul#side-menu a.active:hover{
+	background-color: #2c3e50;
+	color: #ffffff;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary{
+	background-color: #2c3e50;
+	border-color: #2c3e50;
+	color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover,
+.btn-primary:active, .btn-primary.active:active, .open>.dropdown-toggle.btn-primary:active,
+.btn-primary:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus,
+.btn-primary[disabled]:hover, .btn-primary.active[disabled]:hover, .open>.dropdown-toggle.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus, .btn-primary.active[disabled]:focus, .open>.dropdown-toggle.btn-primary[disabled]:focus,
+.btn-primary[disabled]:active, .btn-primary.active[disabled]:active, .open>.dropdown-toggle.btn-primary[disabled]:active{
+    background-color: #273748;
+    border-color: #273748;
+    color: #ffffff;
+}
+
+/* Button default */
+.btn-default, .btn-default:active, .open>.dropdown-toggle.btn-default{
+	background-color: #95a5a6;
+	border-color: #95a5a6;
+	color: #ffffff;
+
+}
+.btn-default:hover, .open>.dropdown-toggle.btn-default:hover,
+.btn-default:active, .open>.dropdown-toggle.btn-default:active,
+.btn-default:focus, .open>.dropdown-toggle.btn-default:focus,
+.btn-default[disabled]:hover, .open>.dropdown-toggle.btn-default[disabled]:hover,
+.btn-default[disabled]:focus, .open>.dropdown-toggle.btn-default[disabled]:focus,
+.btn-default[disabled]:active, .open>.dropdown-toggle.btn-default[disabled]:active{
+	background-color: #869495;
+	border-color: #869495;
+	color: #ffffff;
+}
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus,
+.pagination .active > a:hover, .pagination .active > a:focus,
+.pagination li > a:hover, .pagination li > a:focus{
+	background-color: #95a5a6;
+	color: #ffffff;
+}
+
+/* Button danger */
+.btn-danger, .btn-danger:active, .open>.dropdown-toggle.btn-danger{
+	background-color: #e74c3c;
+	border-color: #e74c3c;
+	color: #ffffff;
+}
+.btn-danger:hover, .open>.dropdown-toggle.btn-danger:hover,
+.btn-danger:active, .open>.dropdown-toggle.btn-danger:active,
+.btn-danger:focus, .open>.dropdown-toggle.btn-danger:focus,
+.btn-danger[disabled]:hover, .open>.dropdown-toggle.btn-danger[disabled]:hover,
+.btn-danger[disabled]:active, .open>.dropdown-toggle.btn-danger[disabled]:active,
+.btn-danger[disabled]:focus, .open>.dropdown-toggle.btn-danger[disabled]:focus{
+	background-color: #cf4436;
+	border-color: #cf4436;
+	color: #ffffff;
+}
+
+.theme-color-button-danger{
+    color: #e74c3c;
+}
+
+.theme-color-button-primary{
+    color: #2c3e50;
+}
+
+/* Header background */
+#navbar-top{
+	background-color: #3498db;
+}
+
+/* Header primary */
+.navbar-default .navbar-link,
+#navbar-top .navbar-top-links a.dropdown-toggle,
+#navbar-top .navbar-top-links a.nav-link,
+#navbar-top .navbar-text{
+	color: #ffffff;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:active .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar{
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-link:hover,
+#navbar-top .navbar-top-links a.dropdown-toggle:hover,
+#navbar-top .navbar-top-links a.nav-link:hover,
+#navbar-top .navbar-top-links .dropdown.open a.dropdown-toggle{
+	color: #ffffff;
+}
+
+/* Border */
+.sidebar ul li,
+.project-list-item,
+#page-wrapper,
+table-bordered>thead>tr>th, .table-bordered>thead>tr>th, table-bordered>tbody>tr>th, .table-bordered>tbody>tr>th, table-bordered>tfoot>tr>th, .table-bordered>tfoot>tr>th, table-bordered>thead>tr>td, .table-bordered>thead>tr>td, table-bordered>tbody>tr>td, .table-bordered>tbody>tr>td, table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>td,
+footer,
+.modal-content,
+.modal-header,
+.modal-footer,
+.dropdown-menu
+{
+	border-color: #e7e7e7;
+}
+.dropdown-menu .divider{
+	background-color: #e7e7e7;
+}
+.popover-title{
+	border-bottom-color: #e7e7e7;
+}
+.theme-border{
+    border-color: #e7e7e7 !important;
+}
+
+/* Highlight */
+.task-list-item:nth-child(odd),
+.table-striped>tbody>tr:nth-of-type(odd),
+select.form-control option[disabled],
+.theme-background-highlight{
+	background-color: #f7f7f7;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus{
+	background-color: #f7f7f7;
+	color: #2c3e50;
+}
+pre.prettyprint,
+.form-control{
+	border-color: #f7f7f7;
+}
+pre.prettyprint:focus,
+.form-control:focus{
+	border-color: #acacac;
+}
+
+/* Dialog warning */
+.alert-warning{
+	border-color: #f39c12;
+}
+
+/* Success */
+.task-list-item .status-label.done, .theme-background-success{
+	background-color: #cbffcd;
+}
+
+/* Failed */
+.task-list-item .status-label.error, .theme-background-failed{
+	background-color: #ffcbcb;
+}
+
+/* ModelView.jsx specific */
+.model-view #potree_sidebar_container .dropdown-menu > li > a{
+	color: #2c3e50;
+}
+
+/* MapView.jsx specific */
+.leaflet-bar a, .leaflet-control > a{
+	background-color: #ffffff !important;
+	border-color: #ffffff !important;
+	color: #2c3e50 !important;
+}
+
+.leaflet-bar a:hover, .leaflet-control > a:hover{
+	background-color: #e5e5e5 !important;
+	border-color: #e5e5e5 !important;
+}
+
+.leaflet-popup-content-wrapper{
+	background-color: #ffffff !important;
+	color: #2c3e50 !important;
+}
+.leaflet-popup-content-wrapper a{
+	color: #3498db !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button{
+	color: #2c3e50 !important;
+}
+.leaflet-container a.leaflet-popup-close-button:hover{
+	color: #000000 !important;
+}
+
+.tag-badge{
+	background-color: #95a5a6;
+	border-color: #95a5a6;
+	color: #ffffff;
+}
+
+.tag-badge a, .tag-badge a:hover{
+	color: #ffffff;
+}
+    </style>
+    
+
+    
+    
+
+    <style type="text/css">
+        
+    </style>
+</head>
+<body data-admin-utc-offset="0">
+
+
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="wrapper">
+        
+
+        <nav id="navbar-top" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+    
+
+    
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li class="user-profile">
+                    <div class="info-item">
+                        Hello, laimatt!<br/>
+                        <span class="email"></span>
+                    </div>
+                </li>
+                
+                <li class="divider"></li>
+                <li><a href="/logout/"><i class="fa fa-sign-out-alt fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+    
+
+            
+                
+                    <a class="navbar-brand" href="/"><img src="/media/CACHE/images/settings/robotlab_logo-transparent-small-2/c616bcead94997f44a4b6899f6ae91c8.png" alt="CCNY Robotics Lab WebODM" /></a>
+                    <a class="navbar-link" href="/"><p class="navbar-text">CCNY Robotics Lab WebODM</p></a>
+                
+            </div>
+
+            
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="/dashboard/"><i class="fa fa-tachometer-alt fa-fw"></i> Dashboard</a>
+                </li>
+                
+                
+                
+                
+
+                
+                
+                    <li>
+                        <a href="/plugins/projects-charts1/"><i class="fa fa-chart-bar"></i> Charts</a>
+
+                        
+                    </li>
+                
+                    <li>
+                        <a href="/plugins/crack_detection/"><i class="fa fa-chart-pie fa-fw"></i> Diagnostic1</a>
+
+                        
+                    </li>
+                
+
+                
+                <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Processing Nodes<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        
+                        <li>
+                            <a href="/processingnode/1/"><span class="fa fa-laptop "></span> node-odm-1</a>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a href="/admin/nodeodm/processingnode/add/"><span class="fa fa-plus-circle"></span> Add New</a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                
+
+                
+                <li>
+                    <a href="#"><i class="fa fa-cogs fa-fw"></i> Administration<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        
+                        
+                        <li>
+                            <a href="/admin/auth/user/"><i class="fa fa-user fa-fw"></i> Accounts</a>
+                        </li>
+                        <li>
+                            <a href="/admin/auth/group/"><i class="fa fa-users fa-fw"></i> Groups</a>
+                        </li>
+                        
+
+                        <li>
+                            <a href="/admin/app/setting/1/change/"><i class="fa fa-magic fa-fw"></i> Brand</a>
+                        </li>
+                        <li>
+                            <a href="/admin/app/theme/1/change/"><i class="fa fa-paint-brush fa-fw"></i> Theme</a>
+                        </li>
+                        <li>
+                            <a href="/admin/app/plugin/"><i class="fa fa-plug fa-fw"></i> Plugins</a>
+                        </li>
+                        <li>
+                            <a href="/admin/app/"><i class="fa fa-cog fa-fw"></i> Application</a>
+                        </li>
+                    </ul>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="/dev-tools/"><i class="fa fa-bug fa-fw"></i> Developer Tools</a>
+                </li>
+                
+                <li id="about-menu">
+                    <a href="/about/"><i class="fa fa-info-circle fa-fw"></i> About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+
+        </nav>
+
+        
+<div id="page-wrapper">
+    <section class="main">
+        <div class="content">
+            
+
+            
+                
+            
+
+            
+	
+	<link type="text/css" href="/static/app/bundles/./css/ModelView-16d3bd051a29b32c8d05.css" rel="stylesheet" async/>
+<script type="text/javascript" src="/static/app/bundles/ModelView-16d3bd051a29b32c8d05.js" async></script>
+
+	<h3><i class="fa fa-cube"></i> Task of 2024-06-07T20:41:25.134Z</h3>
+    
+	<div data-modelview class="full-height"
+		
+			data-task="{&quot;id&quot;: &quot;393fe616-23cb-4739-b481-8800bf412a1d&quot;, &quot;project&quot;: 116, &quot;available_assets&quot;: [&quot;all.zip&quot;, &quot;orthophoto.tif&quot;, &quot;georeferenced_model.laz&quot;, &quot;textured_model.zip&quot;, &quot;textured_model.glb&quot;, &quot;dsm.tif&quot;, &quot;cameras.json&quot;, &quot;shots.geojson&quot;, &quot;report.pdf&quot;], &quot;public&quot;: true, &quot;epsg&quot;: 32618}"
+		
+			data-public="false"
+		
+			data-share-buttons="true"
+		
+	></div>
+
+
+        </div>
+    </section>
+</div>
+
+    </div>
+
+    
+    
+    
+
+</body>
+<script src="/static/app/js/vendor/metisMenu.min.js"></script>
+<script>
+
+window.__taskOptionsDocsLink = "https://docs.opendronemap.org/arguments/";
+
+$(function(){
+    $('#side-menu').metisMenu();
+
+    $(window).bind("load resize", function() {
+        
+        var topOffset = 50;
+        
+
+        var width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
+        if (width < 768) {
+            $('div.navbar-collapse').addClass('collapse');
+            
+            topOffset = 100; // 2-row-menu
+            
+        } else {
+            $('div.navbar-collapse').removeClass('collapse');
+        }
+
+        var height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
+        height = height - topOffset;
+        if (height < 1) height = 1;
+        if (height > topOffset) {
+            $("#page-wrapper").css("min-height", (height) + "px");
+        }
+    });
+
+    var url = window.location;
+    var element = $('ul.nav a').filter(function() {
+     return this.href == url;
+    }).addClass('active').parent();
+
+    while(true){
+        if (element.is('li')){
+            element = element.parent().addClass('in');
+        } else {
+            break;
+        }
+    }
+
+    if (element.parent().is('li')) element.parent().addClass('active');
+});
+
+</script>
+<script src="/static/app/js/vendor/bootstrap.min.js"></script>
+
+</html>

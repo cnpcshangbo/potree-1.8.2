@@ -799,6 +799,31 @@
 					}
 				}]
 			}));
+
+			scene.annotations.add(new Potree.Annotation({//Crack 2
+				title: "Crack(23)",
+				position: [572278.889, 4498554.037, 31.651],
+				cameraPosition: [572290.9623721616, 4498556.8638048265, 24.601052325185435],
+				cameraTarget: [572274.1997239867, 4498562.065219445, 35.615814593457664],
+				//description: `This annotation has actions that switch between elevation and color rendering modes, and open a photo.`,
+				actions: [
+				//Easting: 572285.227173294
+				//Northing: -4498557.180840966
+				//Altitude: 44.757
+				{
+					"icon": Potree.resourcePath + "/icons/photo.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images/S1074688.JPG");
+					}
+				},{
+					"icon": Potree.resourcePath + "/icons/profile.svg",
+					"onclick": function(){
+						// Open a photo here
+						window.open("https://bayonneraw.boshang.online/images_out/2024-04-26_07-29-38/crackoverlay/images/S1074688.JPG");
+					}
+				}]
+			}));
 		}
 		{ // Stain Annotations
 			let scene = viewer.scene;

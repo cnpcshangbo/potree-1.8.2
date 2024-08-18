@@ -99,6 +99,22 @@ export class Sidebar{
 			}
 		));
 
+		// Point Creation
+		elToolbar.append(this.createToolIcon(
+			Potree.resourcePath + '/icons/point.svg', // Choose your point icon
+			'[title]tt.point_annotation', // Tooltip title
+			() => {
+				let point = new Potree.Measure();
+				point.showDistances = false; // Hide distance measurements
+				point.showAngles = false; // Hide angle measurements
+				point.showCoordinates = true; // Show the point's coordinates
+				point.showArea = false; // Hide area display
+				point.closed = true; // Only allow a single point
+				point.maxMarkers = 1; // Limit to one marker
+				viewer.scene.addMeasurement(point);
+			}
+		));
+
 
 		// POINT
 		elToolbar.append(this.createToolIcon(
