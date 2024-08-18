@@ -212,17 +212,15 @@ export class BoxVolume extends Volume {
       const signal = this.abortController.signal;
 
       this.debounceTimer = setTimeout(async () => {
-        const url =
-          "http://localhost:5002/analyze_crack?click1_x=" +
-          this.position.x +
-          "&click1_y=" +
-          this.position.y +
-          "&click2_x=" +
-          (this.position.x + this.scale.x) +
-          "&click2_y=" +
-          (this.position.y + this.scale.y) +
-          "&html_file=" +
-          window.location.href;
+        const url = 
+        "http://laimatt.boshang.online/analyze_crack?" +
+        "x=" + this.position.x + 
+        "&y=" + this.position.y + 
+        "&z=" + this.position.z + 
+        "&length=" + this.scale.x + 
+        "&width=" + this.scale.y + 
+        "&height=" + this.scale.z + 
+        "&html_file=" + encodeURIComponent(window.location.href);
 
         try {
           const response = await fetch(url, { signal }); // Pass the AbortSignal to the fetch request
